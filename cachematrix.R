@@ -2,7 +2,8 @@
 ## It consists of a pair of functions that cache the inverse of an invertible matrix.
 ##    1) makeCacheMatrix
 ##    2) cacheSolve
-##  pass your invertible matrix into "cacheSolve", which returns the inverse matrix
+##  pass your invertible matrix into makeCacheMatrix, which returns a specially formated list
+##  pass this special list into cacheSolve & it will retun the inverse of the original matrix
 ##  if the inverse has already been calculated, it uses a "cached" calcuation
 
 
