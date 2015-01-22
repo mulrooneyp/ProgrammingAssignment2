@@ -7,10 +7,6 @@
 ##  if the inverse has already been calculated, it uses a "cached" calcuation
 
 
-"special matrix" 
-##  pass your "special matrix" into "cacheSolve", , which returns the inverse matric
-
-
 ##  makeCacheMatrix creates a special "Matrix", which is really a list containing a function to
 ##    1) set the value of the Matix
 ##    2) get the value of the Matix
@@ -37,12 +33,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-##  This function calculates the Inverse of the special "matrix" created with #makeCacheMatrix function
+##  cacheSolve,  calculates the Inverse of the original (contained in the list returnd from the makeCacheMatrix function
 ##    However, it first checks to see if the Inverse has already been calculated.
 ##    If so, it gets the Inverse from the cache and skips the computation. 
 ##    Otherwise, it calculates the Inverse of the data and sets the value of the Inverse in the cache 
 ##    via the setInverse function.
-
+##    It return a matrix that is the inverse of original matrix
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
